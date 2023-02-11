@@ -1,2 +1,2 @@
 #!/bin/bash
-file /tmp/iamafile
+while [ ! -f "/tmp/iamafile" ]; do sleep 1; done; file /tmp/iamafile | awk '{print $2}'
